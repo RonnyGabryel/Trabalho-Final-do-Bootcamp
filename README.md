@@ -58,13 +58,12 @@ A sobrecarga de opções em plataformas digitais de jogos prejudica a experiênc
 
 ## Resultados
 
-> *Seção a ser preenchida após o treinamento do modelo.*
+
 
 ---
 
 ## Conclusões
 
-> *Seção a ser preenchida após a análise dos resultados.*
 
 ---
 
