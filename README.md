@@ -91,7 +91,7 @@ cd Trabalho-Final-do-Bootcamp
 ```bash
 jupyter notebook
 ```
-4. Execute o arquivo `recomendacao_jogos.ipynb`
+4. Execute o arquivo `Sistema de Recomendação Inteligente de Jogos para Plataformas Digitais.ipynb`
 
 ---
 
