@@ -4,7 +4,7 @@ Projeto final do Bootcamp de Aprendizado de Máquina da LAMIA. O objetivo é con
 
 ---
 
-## 📑 Sumário
+## Sumário
 - [Introdução](#introdução)
 - [Problema](#problema)
 - [Base de Dados](#base-de-dados)
@@ -23,7 +23,7 @@ Com dezenas de milhares de jogos disponíveis na Steam, encontrar algo que realm
 
 ## Problema
 
-A sobrecarga de opções em plataformas digitais de jogos prejudica a experiência do usuário e a retenção dentro da plataforma. O desafio técnico está em transformar dados implícitos — o tempo que o usuário passa jogando — em uma métrica de engajamento capaz de alimentar um modelo de recomendação eficiente.
+A sobrecarga de opções em plataformas digitais de jogos prejudica a experiência do usuário e a retenção dentro da plataforma. O desafio técnico está em transformar dados implícitos o tempo que o usuário passa jogando em uma métrica de engajamento capaz de alimentar um modelo de recomendação eficiente.
 
 ---
 
