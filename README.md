@@ -44,7 +44,7 @@ A sobrecarga de opções em plataformas digitais de jogos prejudica a experiênc
 
 **Modelos utilizados:**
 - SVD (Singular Value Decomposition) via biblioteca Surprise modelo principal
-- KNN Baseline — modelo de comparação
+- KNN Baseline modelo de comparação
 
 **Métricas de avaliação:**
 
