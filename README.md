@@ -38,12 +38,12 @@ A sobrecarga de opções em plataformas digitais de jogos prejudica a experiênc
 ## Metodologia
 
 **Pré-processamento:**
-- Remoção de contas suspeitas (bots e perfis com tempos de jogo impossíveis)
+- Remoção de contas suspeitas
 - Filtro de esparsidade: usuários com pelo menos 5 jogos e títulos com mais de 10 interações
 - Conversão das horas jogadas em uma escala de engajamento de 1 a 5
 
 **Modelos utilizados:**
-- SVD (Singular Value Decomposition) via biblioteca Surprise — modelo principal
+- SVD (Singular Value Decomposition) via biblioteca Surprise modelo principal
 - KNN Baseline — modelo de comparação
 
 **Métricas de avaliação:**
@@ -113,18 +113,6 @@ jupyter notebook
 - **matplotlib:** [matplotlib.org](https://matplotlib.org/stable/index.html)
 - **seaborn:** [seaborn.pydata.org](https://seaborn.pydata.org)
 - **scikit-learn:** [scikit-learn.org](https://scikit-learn.org/stable/)
-
----
-
-##  Estrutura do repositório
-
-```
-📦 Trabalho-Final-do-Bootcamp
- ┣ 📓 Sistema de Recomendação Inteligente de Jogos para Plataformas Digitais.ipynb
- ┣ 📄 README.md
- ┣ 📊 steam-200k.csv
- ┗ 🎥 pitch.mp4
-```
 
 ---
 
