@@ -1,6 +1,6 @@
 # Sistema de Recomendação Inteligente de Jogos para Plataformas Digitais
 
-Projeto final do Bootcamp de Aprendizado de Máquina da LAMIA. O objetivo é construir um sistema de recomendação de jogos baseado no histórico de horas jogadas dos usuários na Steam, utilizando filtragem colaborativa com o algoritmo SVD.
+Projeto final do Bootcamp de Aprendizado de Máquina da LAMIA. O objetivo é construir um sistema de recomendação de jogos baseado no histórico de horas jogadas dos usuários na Steam, utilizando filtragem colaborativa com o algoritmo SVD ou Decomposição em Valores Singulares.
 
 ---
 
@@ -43,7 +43,7 @@ A sobrecarga de opções em plataformas digitais de jogos prejudica a experiênc
 - Conversão das horas jogadas em uma escala de engajamento de 1 a 5
 
 **Modelos utilizados:**
-- SVD (Singular Value Decomposition) via biblioteca Surprise modelo principal
+- SVD (Decomposição em Valores Singulares) usando biblioteca Surprise modelo principal
 - KNN Baseline modelo de comparação
 
 **Métricas de avaliação:**
@@ -76,7 +76,7 @@ O projeto mostrou que é possível construir um sistema de recomendação funcio
 
 ## Como rodar o projeto
 
-> **Atenção:** a biblioteca scikit-surprise funciona melhor com Python 3.12.x ou inferior. Recomendamos usar o Google Colab para evitar problemas de compatibilidade.
+> **Atenção:** a biblioteca scikit-surprise funciona melhor com Python 3.12.x ou inferior. Recomendo usar o Google Colab para evitar problemas de compatibilidade.
 
 **Instalando as dependências:**
 ```bash
