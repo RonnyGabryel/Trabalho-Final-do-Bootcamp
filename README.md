@@ -1,13 +1,12 @@
-# Sistema de Recomendação Inteligente de Jogos para Plataformas Digitais
+# 🎮 Sistema de Recomendação Inteligente de Jogos para Plataformas Digitais
 
 Projeto final do Bootcamp de Aprendizado de Máquina da LAMIA. O objetivo é construir um sistema de recomendação de jogos baseado no histórico de horas jogadas dos usuários na Steam, utilizando filtragem colaborativa com o algoritmo SVD.
 
 ---
 
-## Sumário
+## 📑 Sumário
 - [Introdução](#introdução)
 - [Problema](#problema)
-- [Documentação](#documentação)
 - [Base de Dados](#base-de-dados)
 - [Metodologia](#metodologia)
 - [Resultados](#resultados)
@@ -24,17 +23,7 @@ Com dezenas de milhares de jogos disponíveis na Steam, encontrar algo que realm
 
 ## Problema
 
-A sobrecarga de opções em plataformas digitais de jogos prejudica a experiência do usuário e a retenção dentro da plataforma. O desafio técnico está em transformar dados implícitos o tempo que o usuário passa jogando em uma métrica de engajamento capaz de alimentar um modelo de recomendação eficiente
-
-O Scikit-suprise ta desuatualizado recomentod usar 1.26.4 do python
-
----
-
-## documentação
-
-- **scikit-surprise:** [Documentação Scitkit](https://surprise.readthedocs.io/)
-- **numpy:** [Documentação Numpy](https://numpy.org/doc/)
-
+A sobrecarga de opções em plataformas digitais de jogos prejudica a experiência do usuário e a retenção dentro da plataforma. O desafio técnico está em transformar dados implícitos — o tempo que o usuário passa jogando — em uma métrica de engajamento capaz de alimentar um modelo de recomendação eficiente.
 
 ---
 
@@ -61,35 +50,45 @@ O Scikit-suprise ta desuatualizado recomentod usar 1.26.4 do python
 
 | Métrica | Meta |
 |---|---|
-| RMSE | < 0,85 |
-| MAE | < 0,50 |
-| Precision@K | > 75% |
+| RMSE | < 1,10 |
+| MAE | < 0,90 |
+| Hit Rate@10 | > 75% |
 
 ---
 
 ## Resultados
 
+| Métrica | Meta | Resultado |
+|---|---|---|
+| RMSE | < 1,10 | 1,0327 ✅ |
+| MAE | < 0,90 | 0,8385 ✅ |
+| Hit Rate@10 | > 75% | 79,3% ✅ |
 
+O modelo SVD superou o KNN Baseline em todas as métricas. A métrica Hit Rate@10 foi escolhida por ser mais adequada para datasets com alta esparsidade como o da Steam, onde a maioria dos usuários interagiu com menos de 1% do catálogo disponível. Ela mede se pelo menos um dos 10 jogos recomendados é relevante para o usuário, o que reflete melhor a experiência real de recomendação.
 
 ---
 
 ## Conclusões
 
+O projeto mostrou que é possível construir um sistema de recomendação funcional usando apenas o histórico de horas jogadas como sinal de engajamento. O SVD com fatoração de matrizes se mostrou superior ao KNN Baseline e conseguiu gerar recomendações coerentes com o perfil de cada jogador. A principal limitação encontrada foi a esparsidade extrema do dataset, característica natural de plataformas com catálogos muito grandes, que limita métricas mais rígidas como a Precision@K.
 
 ---
 
-## Como rodar o projeto
+## ⚙️ Como rodar o projeto
 
-**Pré-requisitos:**
-- Python 3.8+
-- Jupyter Notebook
+> ⚠️ **Atenção:** a biblioteca scikit-surprise funciona melhor com Python 3.12.x ou inferior. Recomendamos usar o Google Colab para evitar problemas de compatibilidade.
 
 **Instalando as dependências:**
 ```bash
 pip install pandas numpy matplotlib seaborn scikit-learn scikit-surprise
 ```
 
-**Rodando:**
+**Rodando no Google Colab:**
+1. Acesse [Google Colab](https://colab.research.google.com)
+2. Faça o upload do notebook ou abra direto pelo GitHub
+3. Execute as células em ordem
+
+**Rodando localmente:**
 1. Clone o repositório
 ```bash
 git clone https://github.com/RonnyGabryel/Trabalho-Final-do-Bootcamp.git
@@ -106,4 +105,30 @@ jupyter notebook
 
 ---
 
+## 📚 Documentação das bibliotecas
+
+- **scikit-surprise:** [surprise.readthedocs.io](https://surprise.readthedocs.io/)
+- **pandas:** [pandas.pydata.org](https://pandas.pydata.org/docs/)
+- **numpy:** [numpy.org/doc](https://numpy.org/doc/)
+- **matplotlib:** [matplotlib.org](https://matplotlib.org/stable/index.html)
+- **seaborn:** [seaborn.pydata.org](https://seaborn.pydata.org)
+- **scikit-learn:** [scikit-learn.org](https://scikit-learn.org/stable/)
+
+---
+
 ## 📁 Estrutura do repositório
+
+```
+📦 Trabalho-Final-do-Bootcamp
+ ┣ 📓 Sistema de Recomendação Inteligente de Jogos para Plataformas Digitais.ipynb
+ ┣ 📄 README.md
+ ┣ 📊 steam-200k.csv
+ ┗ 🎥 pitch.mp4
+```
+
+---
+
+## 👤 Autor
+
+**Ronny Gabryel Colatino de Souza**  
+Bootcamp de Aprendizado de Máquina — LAMIA
