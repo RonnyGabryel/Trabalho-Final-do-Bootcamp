@@ -1,10 +1,10 @@
-# 🎮 Sistema de Recomendação Inteligente de Jogos para Plataformas Digitais
+# Sistema de Recomendação Inteligente de Jogos para Plataformas Digitais
 
 Projeto final do Bootcamp de Aprendizado de Máquina da LAMIA. O objetivo é construir um sistema de recomendação de jogos baseado no histórico de horas jogadas dos usuários na Steam, utilizando filtragem colaborativa com o algoritmo SVD.
 
 ---
 
-## 📑 Sumário
+##  Sumário
 - [Introdução](#introdução)
 - [Problema](#problema)
 - [Base de Dados](#base-de-dados)
@@ -23,7 +23,7 @@ Com dezenas de milhares de jogos disponíveis na Steam, encontrar algo que realm
 
 ## Problema
 
-A sobrecarga de opções em plataformas digitais de jogos prejudica a experiência do usuário e a retenção dentro da plataforma. O desafio técnico está em transformar dados implícitos — o tempo que o usuário passa jogando — em uma métrica de engajamento capaz de alimentar um modelo de recomendação eficiente.
+A sobrecarga de opções em plataformas digitais de jogos prejudica a experiência do usuário e a retenção dentro da plataforma. O desafio técnico está em transformar dados implícitos  o tempo que o usuário passa jogando em uma métrica de engajamento capaz de alimentar um modelo de recomendação eficiente.
 
 ---
 
@@ -74,9 +74,9 @@ O projeto mostrou que é possível construir um sistema de recomendação funcio
 
 ---
 
-## ⚙️ Como rodar o projeto
+## Como rodar o projeto
 
-> ⚠️ **Atenção:** a biblioteca scikit-surprise funciona melhor com Python 3.12.x ou inferior. Recomendamos usar o Google Colab para evitar problemas de compatibilidade.
+> **Atenção:** a biblioteca scikit-surprise funciona melhor com Python 3.12.x ou inferior. Recomendamos usar o Google Colab para evitar problemas de compatibilidade.
 
 **Instalando as dependências:**
 ```bash
@@ -105,7 +105,7 @@ jupyter notebook
 
 ---
 
-## 📚 Documentação das bibliotecas
+## Documentação das bibliotecas
 
 - **scikit-surprise:** [surprise.readthedocs.io](https://surprise.readthedocs.io/)
 - **pandas:** [pandas.pydata.org](https://pandas.pydata.org/docs/)
@@ -116,7 +116,7 @@ jupyter notebook
 
 ---
 
-## 📁 Estrutura do repositório
+##  Estrutura do repositório
 
 ```
 📦 Trabalho-Final-do-Bootcamp
