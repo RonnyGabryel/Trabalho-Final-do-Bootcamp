@@ -11,6 +11,14 @@ Projeto final do Bootcamp de Aprendizado de Máquina da LAMIA. O objetivo é con
 
 ---
 
+## Sumário
+
+| | NAVEGAÇÃO DO PROJETO | |
+| :---: | :---: | :---: |
+| [Introdução](#introdução) | [Problema](#problema) | [Base de Dados](#base-de-dados) |
+| [Metodologia](#metodologia) | [Resultados](#resultados) | [Conclusões](#conclusões) |
+| | [Como Rodar o Projeto](#como-rodar-o-projeto) | |
+
 ##  Sumário
 - [Introdução](#introdução)
 - [Problema](#problema)
