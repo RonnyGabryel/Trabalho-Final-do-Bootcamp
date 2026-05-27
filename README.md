@@ -74,19 +74,22 @@ O projeto mostrou que é possível construir um sistema de recomendação funcio
 
 ---
 
-## Como rodar o projeto
+##  Como rodar o projeto
 
-> **Atenção:** a biblioteca scikit-surprise funciona melhor com Python 3.12.x ou inferior. Recomendo usar o Google Colab para evitar problemas de compatibilidade.
+>  **Atenção:** o scikit-surprise tem conflito com versões recentes do NumPy.
 
-**Instalando as dependências:**
-```bash
-pip install pandas numpy matplotlib seaborn scikit-learn scikit-surprise
-```
+**Rodando no Google Colab (recomendado):**
 
-**Rodando no Google Colab:**
 1. Acesse [Google Colab](https://colab.research.google.com)
 2. Faça o upload do notebook ou abra direto pelo GitHub
-3. Execute as células em ordem
+3. Na primeira célula, execute exatamente isso antes de qualquer import:
+```bash
+!pip uninstall -y numpy scikit-surprise
+!pip install numpy==1.26.4
+!pip install scikit-surprise
+```
+4. Reinicie o ambiente após a instalação 
+5. Execute as demais células em ordem
 
 **Rodando localmente:**
 1. Clone o repositório
@@ -97,13 +100,17 @@ git clone https://github.com/RonnyGabryel/Trabalho-Final-do-Bootcamp.git
 ```bash
 cd Trabalho-Final-do-Bootcamp
 ```
-3. Abra o notebook
+3. Instale as dependências na ordem correta
+```bash
+pip install numpy==1.26.4
+pip install scikit-surprise
+pip install pandas matplotlib seaborn scikit-learn
+```
+4. Abra o notebook
 ```bash
 jupyter notebook
 ```
-4. Execute o arquivo `Sistema de Recomendação Inteligente de Jogos para Plataformas Digitais.ipynb`
-
----
+5. Execute o arquivo `Sistema de Recomendação Inteligente de Jogos para Plataformas Digitais.ipynb`
 
 ## Documentação das bibliotecas
 
