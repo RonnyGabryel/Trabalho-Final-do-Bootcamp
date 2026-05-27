@@ -1,6 +1,4 @@
-<p align="center">
-  <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExb200dWZhZmE4eDZvaHNhcGF5Y3JwYW0weTM3Y21jNDFwdjkwbnVhcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/KX5nwoDX97AtPvKBF6/giphy.gif" alt="Steam UI">
-</p>
+<img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdTYzbGxzYjZ5dGVsNnVnNGNzaWRhM25leWUxdDVzazFqbzQ0d2k5MyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/doXBzUFJRxpaUbuaqz/giphy.gif" alt="Steam UI" width="100%" height="300px">
 
 
 <p align="center">
