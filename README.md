@@ -119,11 +119,13 @@ jupyter notebook
 ```
 5. Execute o arquivo `Sistema_de_Recomendação_Inteligente_de_Jogos_para_Plataformas_Digitais.ipynb.ipynb`
 
-## Documentação das bibliotecas
+## Documentação das Bibliotecas
 
-- **scikit-surprise:** [surprise.readthedocs.io](https://surprise.readthedocs.io/)
-- **pandas:** [pandas.pydata.org](https://pandas.pydata.org/docs/)
-- **numpy:** [numpy.org/doc](https://numpy.org/doc/)
-- **matplotlib:** [matplotlib.org](https://matplotlib.org/stable/index.html)
-- **seaborn:** [seaborn.pydata.org](https://seaborn.pydata.org)
-- **scikit-learn:** [scikit-learn.org](https://scikit-learn.org/stable/)
+| Biblioteca | Link Oficial |
+| :--- | :--- |
+| <img src="https://img.shields.io/badge/scikit--surprise-00599C?style=flat-square" alt="Surprise"> | [surprise.readthedocs.io](https://surprise.readthedocs.io/) |
+| <img src="https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white" alt="Pandas"> | [pandas.pydata.org](https://pandas.pydata.org/docs/) |
+| <img src="https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white" alt="NumPy"> | [numpy.org/doc](https://numpy.org/doc/) |
+| <img src="https://img.shields.io/badge/Matplotlib-ffffff?style=flat-square&logo=matplotlib&logoColor=black" alt="Matplotlib"> | [matplotlib.org](https://matplotlib.org/stable/index.html) |
+| <img src="https://img.shields.io/badge/Seaborn-4C516D?style=flat-square" alt="Seaborn"> | [seaborn.pydata.org](https://seaborn.pydata.org) |
+| <img src="https://img.shields.io/badge/Scikit--Learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white" alt="Scikit-Learn"> | [scikit-learn.org](https://scikit-learn.org/stable/) |
