@@ -1,3 +1,4 @@
+![Steam UI](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbGpzd3E1N211ZXlmMmFjcGx0bWIzbm91YXU2dGNudGNheDdwYXRzbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/f3iwJFOVOwuy7K6FFw/giphy.gif)
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
@@ -13,14 +14,6 @@ Projeto final do Bootcamp de Aprendizado de Máquina da LAMIA. O objetivo é con
 
 ## Sumário
 
-| | NAVEGAÇÃO DO PROJETO | |
-| :---: | :---: | :---: |
-| [Introdução](#introdução) | [Problema](#problema) | [Base de Dados](#base-de-dados) |
-| [Metodologia](#metodologia) | [Resultados](#resultados) | [Conclusões](#conclusões) |
-| | [Como Rodar o Projeto](#como-rodar-o-projeto) | |
-
-## Sumário
-
 > **01.** [Introdução](#introdução)  
 > **02.** [O Problema](#problema)  
 > **03.** [Base de Dados](#base-de-dados)  
@@ -28,15 +21,6 @@ Projeto final do Bootcamp de Aprendizado de Máquina da LAMIA. O objetivo é con
 > **05.** [Resultados](#resultados)  
 > **06.** [Conclusões](#conclusões)  
 > **07.** [Como Rodar o Projeto](#como-rodar-o-projeto)
-
-##  Sumário
-- [Introdução](#introdução)
-- [Problema](#problema)
-- [Base de Dados](#base-de-dados)
-- [Metodologia](#metodologia)
-- [Resultados](#resultados)
-- [Conclusões](#conclusões)
-- [Como rodar o projeto](#como-rodar-o-projeto)
 
 ---
 
