@@ -1,4 +1,8 @@
-<img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbGpzd3E1N211ZXlmMmFjcGx0bWIzbm91YXU2dGNudGNheDdwYXRzbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/f3iwJFOVOwuy7K6FFw/giphy.gif" alt="Steam UI" width="100%">
+<p align="center">
+  <img src="Y2lkPTc5MGI3NjExb200dWZhZmE4eDZvaHNhcGF5Y3JwYW0weTM3Y21jNDFwdjkwbnVhcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw" alt="Steam UI">
+</p>
+
+
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
   <img src="https://img.shields.io/badge/Steam-000000?style=for-the-badge&logo=steam&logoColor=white" alt="Steam">
