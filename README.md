@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="Y2lkPTc5MGI3NjExb200dWZhZmE4eDZvaHNhcGF5Y3JwYW0weTM3Y21jNDFwdjkwbnVhcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw" alt="Steam UI">
+  <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExb200dWZhZmE4eDZvaHNhcGF5Y3JwYW0weTM3Y21jNDFwdjkwbnVhcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/KX5nwoDX97AtPvKBF6/giphy.gif" alt="Steam UI">
 </p>
 
 
