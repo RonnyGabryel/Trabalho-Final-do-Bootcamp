@@ -110,7 +110,7 @@ pip install pandas matplotlib seaborn scikit-learn
 ```bash
 jupyter notebook
 ```
-5. Execute o arquivo `Sistema de Recomendação Inteligente de Jogos para Plataformas Digitais.ipynb`
+5. Execute o arquivo `Sistema_de_Recomendação_Inteligente_de_Jogos_para_Plataformas_Digitais.ipynb.ipynb`
 
 ## Documentação das bibliotecas
 
