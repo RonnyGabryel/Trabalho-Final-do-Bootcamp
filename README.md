@@ -86,41 +86,41 @@ O projeto mostrou que é possível construir um sistema de recomendação funcio
 
 ##  Como rodar o projeto
 
->  **Atenção:** o scikit-surprise tem conflito com versões recentes do NumPy.
+> **Nota Metodológica sobre Compatibilidade:** A biblioteca `scikit-surprise` (utilizada para a fatoração de matrizes colaborativa) apresenta incompatibilidades estritas com o ecossistema moderno do Python (especificamente versões do Python iguais ou superiores à 3.13 e versões do NumPy na árvore 2.x). Isso ocorre devido a alterações nas interfaces de tipos em C/Cython dentro do núcleo do NumPy moderno. Para mitigar falhas de compilação, assegure o uso do **Python 3.11 (ou inferior)** e force o *downgrade* do NumPy para a versão estável **1.26.4**, conforme as instruções abaixo.
 
-**Rodando no Google Colab (recomendado):**
+### Execução do Projeto
 
-1. Acesse [Google Colab](https://colab.research.google.com)
-2. Faça o upload do notebook ou abra direto pelo GitHub
-3. Na primeira célula, execute exatamente isso antes de qualquer import:
+Para a reprodução dos experimentos localmente, recomenda-se a utilização de um gerenciador de ambientes virtuais (como o **Conda** ou **Virtualenv**) sob a especificação do **Python 3.11** configurado no PyCharm.
+  
+1. Efetue a clonagem do repositório via terminal:
 ```bash
-!pip uninstall -y numpy scikit-surprise
-!pip install numpy==1.26.4
-!pip install scikit-surprise
+git clone [git clone [https://github.com/RonnyGabryel/Trabalho-Final-do-Bootcamp.git](https://github.com/RonnyGabryel/Trabalho-Final-do-Bootcamp.git)
 ```
-4. Reinicie o ambiente após a instalação 
-5. Execute as demais células em ordem
-
-**Rodando localmente:**
-1. Clone o repositório
-```bash
-git clone https://github.com/RonnyGabryel/Trabalho-Final-do-Bootcamp.git
+  
+2. Navegue até o diretório raiz do projeto:
+  
 ```
-2. Acesse a pasta
-```bash
 cd Trabalho-Final-do-Bootcamp
 ```
-3. Instale as dependências na ordem correta
-```bash
+  
+3. Instale as dependências respeitando estritamente a ordem de precedência para evitar sobreposições de versão:
+
+# 1. Configuração da infraestrutura base compatível
 pip install numpy==1.26.4
+
+# 2. Compilação das extensões do algoritmo preditivo
 pip install scikit-surprise
+
+# 3. Instalação das bibliotecas de manipulação de dados e visualização gráfica
 pip install pandas matplotlib seaborn scikit-learn
+
+(Dica: Caso utilize o Anaconda/Miniconda, o comando conda install -c conda-forge scikit-surprise pandas pode ser utilizado para obter os binários pré-compilados de forma direta).
+
+4. Abra a pasta do projeto no PyCharm, certifique-se de vincular o interpretador com o ambiente criado e execute o script principal:
+
 ```
-4. Abra o notebook
-```bash
-jupyter notebook
+python Sistema_de_Recomendação_Inteligente_de_Jogos_para_Plataformas_Digitais.py
 ```
-5. Execute o arquivo `Sistema_de_Recomendação_Inteligente_de_Jogos_para_Plataformas_Digitais.ipynb.ipynb`
 
 ## Documentação das Bibliotecas
 
