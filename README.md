@@ -105,14 +105,20 @@ cd Trabalho-Final-do-Bootcamp
   
 3. Instale as dependências respeitando estritamente a ordem de precedência para evitar sobreposições de versão:
 
-# 1. Configuração da infraestrutura base compatível
+## 1. Configuração da infraestrutura base compatível
+```
 pip install numpy==1.26.4
+```
 
-# 2. Compilação das extensões do algoritmo preditivo
+## 2. Compilação das extensões do algoritmo preditivo
+```
 pip install scikit-surprise
+```
 
-# 3. Instalação das bibliotecas de manipulação de dados e visualização gráfica
+## 3. Instalação das bibliotecas de manipulação de dados e visualização gráfica
+```
 pip install pandas matplotlib seaborn scikit-learn
+```
 
 (Dica: Caso utilize o Anaconda/Miniconda, o comando conda install -c conda-forge scikit-surprise pandas pode ser utilizado para obter os binários pré-compilados de forma direta).
 
