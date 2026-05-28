@@ -93,8 +93,9 @@ O projeto mostrou que é possível construir um sistema de recomendação funcio
 Para a reprodução dos experimentos localmente, recomenda-se a utilização de um gerenciador de ambientes virtuais (como o **Conda** ou **Virtualenv**) sob a especificação do **Python 3.11** configurado no PyCharm.
   
 1. Efetue a clonagem do repositório via terminal:
-```bash
-git clone [git clone [https://github.com/RonnyGabryel/Trabalho-Final-do-Bootcamp.git](https://github.com/RonnyGabryel/Trabalho-Final-do-Bootcamp.git)
+
+```
+git clone [https://github.com/RonnyGabryel/Trabalho-Final-do-Bootcamp.git](https://github.com/RonnyGabryel/Trabalho-Final-do-Bootcamp.git)
 ```
   
 2. Navegue até o diretório raiz do projeto:
@@ -105,30 +106,23 @@ cd Trabalho-Final-do-Bootcamp
   
 3. Instale as dependências respeitando estritamente a ordem de precedência para evitar sobreposições de versão:
 
-## 1. Configuração da infraestrutura base compatível
 ```
-pip install numpy==1.26.4
-```
-
-## 2. Compilação das extensões do algoritmo preditivo
-```
-pip install scikit-surprise
+pip install -r requirements.txt
 ```
 
-## 3. Instalação das bibliotecas de manipulação de dados e visualização gráfica
+Dica para usuários de Anaconda/Miniconda: Para evitar problemas de compilação do scikit-surprise, você também pode instalar os binários pré-compilados diretamente via Conda executando:
 ```
-pip install pandas matplotlib seaborn scikit-learn
+conda install -c conda-forge numpy=1.26.4 scikit-surprise pandas matplotlib seaborn scikit-learn -y
 ```
 
-(Dica: Caso utilize o Anaconda/Miniconda, o comando conda install -c conda-forge scikit-surprise pandas pode ser utilizado para obter os binários pré-compilados de forma direta).
-
-4. Abra a pasta do projeto no PyCharm, certifique-se de vincular o interpretador com o ambiente criado e execute o script principal:
-
+4. Abra a pasta do projeto no PyCharm, certifique-se de vincular o interpretador e execute o script principal:
+   
 ```
 python Sistema_de_Recomendação_Inteligente_de_Jogos_para_Plataformas_Digitais.py
 ```
 
 ## Documentação das Bibliotecas
+
 
 | Biblioteca | Link Oficial |
 | :--- | :--- |
