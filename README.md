@@ -107,7 +107,7 @@ cd Trabalho-Final-do-Bootcamp
 3. Instale as dependências respeitando estritamente a ordem de precedência para evitar sobreposições de versão:
 
 ```
-pip install -r requirements.txt
+pip install -r Rquerimento.txt
 ```
 
 Dica para usuários de Anaconda/Miniconda: Para evitar problemas de compilação do scikit-surprise, você também pode instalar os binários pré-compilados diretamente via Conda executando:
