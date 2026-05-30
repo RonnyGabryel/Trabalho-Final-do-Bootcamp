@@ -94,7 +94,7 @@ A abordagem de limiares fixos de horas foi descartada por ignorar as diferenças
 
 O desvio padrão reduzido confirma que o modelo é estável e generaliza consistentemente entre diferentes partições dos dados.
 
-**Comparativo SVD vs KNN Baseline — Conjunto de Teste:**
+**Comparativo SVD vs KNN Baseline Conjunto de Teste:**
 
 | Modelo | RMSE | MAE |
 |---|---|---|
