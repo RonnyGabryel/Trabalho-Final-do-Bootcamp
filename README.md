@@ -53,7 +53,7 @@ A sobrecarga de opções em plataformas digitais de jogos prejudica a experiênc
 - Filtro de esparsidade: usuários com histórico mínimo de 5 jogos e títulos com pelo menos 10 interações registradas
 - Construção da métrica de engajamento por normalização percentil por jogo (descrita abaixo)
 
-**Métrica de Engajamento — Normalização por Percentil:**
+**Métrica de Engajamento Normalização por Percentil:**
 
 A abordagem de limiares fixos de horas foi descartada por ignorar as diferenças estruturais entre gêneros de jogos. Um RPG com 20 horas representa engajamento mediano, enquanto 20 horas em um jogo casual representa saturação total. Para resolver isso, a nota de engajamento de cada usuário é calculada com base em sua posição percentil na distribuição de horas do respectivo jogo, tornando a escala relativa ao comportamento dos demais jogadores do mesmo título. O resultado foi uma distribuição uniforme entre as cinco classes:
 
@@ -85,7 +85,7 @@ A abordagem de limiares fixos de horas foi descartada por ignorar as diferenças
 
 ## Resultados
 
-**Validação Cruzada — SVD (5-fold):**
+**Validação Cruzada  SVD (5-fold):**
 
 | Métrica | Média | Desvio Padrão |
 |---|---|---|
@@ -117,7 +117,6 @@ O SVD superou o KNN Baseline em todas as métricas e foi selecionado como modelo
 
 O projeto demonstrou que é possível construir um sistema de recomendação funcional e robusto utilizando exclusivamente o histórico de horas jogadas como sinal de engajamento. A substituição de limiares fixos pela normalização percentil por jogo representou uma melhoria metodológica relevante, produzindo uma escala de engajamento mais fiel ao comportamento real dos usuários. O SVD com fatoração de matrizes se mostrou superior ao KNN Baseline em todas as métricas avaliadas e gerou recomendações coerentes com o perfil de cada jogador. A principal limitação encontrada foi a esparsidade extrema de 97,94% do dataset, característica natural de plataformas com catálogos muito grandes, que limita métricas mais rígidas como a Precision@K.
 
----
 
 ---
 
