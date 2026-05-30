@@ -66,7 +66,7 @@ A abordagem de limiares fixos de horas foi descartada por ignorar as diferenças
 | 5 | 10.216 |
 
 **Modelos utilizados:**
-- **SVD** (Decomposição em Valores Singulares) via biblioteca Surprise — modelo principal
+- **SVD** (Decomposição em Valores Singulares) via biblioteca Surprise modelo principal
 - **KNN Baseline** modelo de referência para comparação
 
 **Validação:**
