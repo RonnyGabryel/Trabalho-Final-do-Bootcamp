@@ -178,7 +178,7 @@ completo de treinamento, basta adicionar ao script:
 ```python
 import pickle
 
-with open('modelo_svd.pkl', 'rb') as f:
+with open('modelo_Treinado.pkl', 'rb') as f:
     svd = pickle.load(f)
 ```
 
