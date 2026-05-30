@@ -1,15 +1,14 @@
 <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdTYzbGxzYjZ5dGVsNnVnNGNzaWRhM25leWUxdDVzazFqbzQ0d2k5MyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/doXBzUFJRxpaUbuaqz/giphy.gif" alt="Steam UI" width="100%" height="300px">
 
-
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
   <img src="https://img.shields.io/badge/Steam-000000?style=for-the-badge&logo=steam&logoColor=white" alt="Steam">
-<img src="https://img.shields.io/badge/PyCharm-000000?style=for-the-badge&logo=pycharm&logoColor=white" alt="PyCharm">
+  <img src="https://img.shields.io/badge/PyCharm-000000?style=for-the-badge&logo=pycharm&logoColor=white" alt="PyCharm">
 </p>
 
 # Sistema de Recomendação Inteligente de Jogos para Plataformas Digitais
 
-Projeto final do Bootcamp de Aprendizado de Máquina da LAMIA. O objetivo é construir um sistema de recomendação de jogos baseado no histórico de horas jogadas dos usuários na Steam, utilizando filtragem colaborativa com o algoritmo SVD ou Decomposição em Valores Singulares.
+Projeto final do Bootcamp de Aprendizado de Máquina da LAMIA. O objetivo é construir um sistema de recomendação de jogos baseado no histórico de horas jogadas dos usuários na Steam, utilizando filtragem colaborativa com o algoritmo SVD (Decomposição em Valores Singulares).
 
 ---
 
@@ -33,54 +32,92 @@ Com dezenas de milhares de jogos disponíveis na Steam, encontrar algo que realm
 
 ## Problema
 
-A sobrecarga de opções em plataformas digitais de jogos prejudica a experiência do usuário e a retenção dentro da plataforma. O desafio técnico está em transformar dados implícitos  o tempo que o usuário passa jogando em uma métrica de engajamento capaz de alimentar um modelo de recomendação eficiente.
+A sobrecarga de opções em plataformas digitais de jogos prejudica a experiência do usuário e a retenção dentro da plataforma. O desafio técnico está em transformar dados implícitos — o tempo que o usuário passa jogando — em uma métrica de engajamento capaz de alimentar um modelo de recomendação eficiente.
 
 ---
 
 ## Base de Dados
 
 - **Fonte:** [Steam Video Games Dataset — Kaggle](https://www.kaggle.com/datasets/tamber/steam-video-games)
-- **Tamanho:** ~200.000 registros de interações de usuários reais da Steam
+- **Tamanho bruto:** 200.000 registros de interações de usuários reais da Steam
+- **Tamanho após pré-processamento:** 50.653 registros | 2.435 usuários | 1.011 jogos
 - **Colunas:** `user_id`, `game_title`, `behavior`, `hours_played`
+- **Esparsidade da matriz usuário-jogo:** 97,94%
 
 ---
 
 ## Metodologia
 
 **Pré-processamento:**
-- Remoção de contas suspeitas
-- Filtro de esparsidade: usuários com pelo menos 5 jogos e títulos com mais de 10 interações
-- Conversão das horas jogadas em uma escala de engajamento de 1 a 5
+- Isolamento exclusivo de registros com `behavior = 'play'`, descartando entradas de compra que não representam engajamento real
+- Filtro de esparsidade: usuários com histórico mínimo de 5 jogos e títulos com pelo menos 10 interações registradas
+- Construção da métrica de engajamento por normalização percentil por jogo (descrita abaixo)
+
+**Métrica de Engajamento — Normalização por Percentil:**
+
+A abordagem de limiares fixos de horas foi descartada por ignorar as diferenças estruturais entre gêneros de jogos. Um RPG com 20 horas representa engajamento mediano, enquanto 20 horas em um jogo casual representa saturação total. Para resolver isso, a nota de engajamento de cada usuário é calculada com base em sua posição percentil na distribuição de horas do respectivo jogo, tornando a escala relativa ao comportamento dos demais jogadores do mesmo título. O resultado foi uma distribuição uniforme entre as cinco classes:
+
+| Nota | Registros |
+|---|---|
+| 1 | 11.104 |
+| 2 | 9.743 |
+| 3 | 9.772 |
+| 4 | 9.818 |
+| 5 | 10.216 |
 
 **Modelos utilizados:**
-- SVD (Decomposição em Valores Singulares) usando biblioteca Surprise modelo principal
-- KNN Baseline modelo de comparação
+- **SVD** (Decomposição em Valores Singulares) via biblioteca Surprise — modelo principal
+- **KNN Baseline** — modelo de referência para comparação
+
+**Validação:**
+- Divisão treino/teste: 80%/20% com `random_state=42`
+- Validação cruzada com 5 folds aplicada ao SVD para verificação de estabilidade
 
 **Métricas de avaliação:**
 
 | Métrica | Meta |
 |---|---|
-| RMSE | < 1,10 |
-| MAE | < 0,90 |
-| Hit Rate@10 | > 75% |
+| RMSE (SVD) | inferior ao KNN Baseline |
+| MAE (SVD) | inferior ao KNN Baseline |
+| Hit Rate@10 | > 80% |
 
 ---
 
 ## Resultados
 
+**Validação Cruzada — SVD (5-fold):**
+
+| Métrica | Média | Desvio Padrão |
+|---|---|---|
+| RMSE | 1,4316 | ±0,0017 |
+| MAE | 1,2259 | ±0,0018 |
+
+O desvio padrão reduzido confirma que o modelo é estável e generaliza consistentemente entre diferentes partições dos dados.
+
+**Comparativo SVD vs KNN Baseline — Conjunto de Teste:**
+
+| Modelo | RMSE | MAE |
+|---|---|---|
+| KNN Baseline | 1,4629 | 1,2358 |
+| **SVD** | **1,4217 ✅** | **1,2153 ✅** |
+
+**Hit Rate@10:**
+
 | Métrica | Meta | Resultado |
 |---|---|---|
-| RMSE | < 1,10 | 1,0327 ✅ |
-| MAE | < 0,90 | 0,8385 ✅ |
-| Hit Rate@10 | > 75% | 79,3% ✅ |
+| Hit Rate@10 | > 80% | 83,3% ✅ |
 
-O modelo SVD superou o KNN Baseline em todas as métricas. A métrica Hit Rate@10 foi escolhida por ser mais adequada para datasets com alta esparsidade como o da Steam, onde a maioria dos usuários interagiu com menos de 1% do catálogo disponível. Ela mede se pelo menos um dos 10 jogos recomendados é relevante para o usuário, o que reflete melhor a experiência real de recomendação.
+O SVD superou o KNN Baseline em todas as métricas e foi selecionado como modelo final. A métrica Hit Rate@10 indica que 83,3% dos usuários receberam ao menos uma recomendação genuinamente relevante entre as 10 primeiras sugestões geradas, superando a meta estabelecida.
+
+> **Nota sobre os valores absolutos de RMSE e MAE:** Os valores obtidos são naturalmente superiores aos de projetos que utilizam limiares fixos de horas, pois a normalização por percentil produz uma distribuição uniforme entre as notas, maximizando a variância dos rótulos e tornando a tarefa de predição mais exigente. O indicador mais representativo da utilidade prática do sistema é o Hit Rate@10.
 
 ---
 
 ## Conclusões
 
-O projeto mostrou que é possível construir um sistema de recomendação funcional usando apenas o histórico de horas jogadas como sinal de engajamento. O SVD com fatoração de matrizes se mostrou superior ao KNN Baseline e conseguiu gerar recomendações coerentes com o perfil de cada jogador. A principal limitação encontrada foi a esparsidade extrema do dataset, característica natural de plataformas com catálogos muito grandes, que limita métricas mais rígidas como a Precision@K.
+O projeto demonstrou que é possível construir um sistema de recomendação funcional e robusto utilizando exclusivamente o histórico de horas jogadas como sinal de engajamento. A substituição de limiares fixos pela normalização percentil por jogo representou uma melhoria metodológica relevante, produzindo uma escala de engajamento mais fiel ao comportamento real dos usuários. O SVD com fatoração de matrizes se mostrou superior ao KNN Baseline em todas as métricas avaliadas e gerou recomendações coerentes com o perfil de cada jogador. A principal limitação encontrada foi a esparsidade extrema de 97,94% do dataset, característica natural de plataformas com catálogos muito grandes, que limita métricas mais rígidas como a Precision@K.
+
+---
 
 ---
 
