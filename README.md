@@ -168,3 +168,18 @@ python Sistema_de_Recomendação_Inteligente_de_Jogos_para_Plataformas_Digitais.
 | <img src="https://img.shields.io/badge/Matplotlib-ffffff?style=flat-square&logo=matplotlib&logoColor=black" alt="Matplotlib"> | [matplotlib.org](https://matplotlib.org/stable/index.html) |
 | <img src="https://img.shields.io/badge/Seaborn-4C516D?style=flat-square" alt="Seaborn"> | [seaborn.pydata.org](https://seaborn.pydata.org) |
 | <img src="https://img.shields.io/badge/Scikit--Learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white" alt="Scikit-Learn"> | [scikit-learn.org](https://scikit-learn.org/stable/) |
+
+### Carregar o modelo pre-treinar (opcional)
+
+O arquivo `modelo_svd.pkl` disponível no repositório contém o modelo já 
+treinado e serializado. Para utilizá-lo diretamente sem executar o pipeline 
+completo de treinamento, basta adicionar ao script:
+
+```python
+import pickle
+
+with open('modelo_svd.pkl', 'rb') as f:
+    svd = pickle.load(f)
+```
+
+> O módulo `pickle` é nativo do Python e não requer instalação adicional.
