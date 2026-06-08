@@ -143,7 +143,7 @@ cd Trabalho-Final-do-Bootcamp
 3. Instale as dependências respeitando estritamente a ordem de precedência para evitar sobreposições de versão:
 
 ```
-pip install -r Rquerimento.txt
+pip install -r requirementos.txt
 ```
 
 Dica para usuários de Anaconda/Miniconda: Para evitar problemas de compilação do scikit-surprise, você também pode instalar os binários pré-compilados diretamente via Conda executando:
@@ -178,7 +178,7 @@ completo de treinamento, basta adicionar ao script:
 ```python
 import pickle
 
-with open('modelo_Treinado.pkl', 'rb') as f:
+with open('modelo_svd.pkl', 'rb') as f:
     svd = pickle.load(f)
 ```
 
