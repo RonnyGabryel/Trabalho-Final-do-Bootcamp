@@ -89,8 +89,8 @@ A abordagem de limiares fixos de horas foi descartada por ignorar as diferenças
 
 | Métrica | Média | Desvio Padrão |
 |---|---|---|
-| RMSE | 1,4316 | ±0,0017 |
-| MAE | 1,2259 | ±0,0018 |
+| RMSE | 1,4316 | 0,0017 |
+| MAE | 1,2259 | 0,0018 |
 
 O desvio padrão reduzido confirma que o modelo é estável e generaliza consistentemente entre diferentes partições dos dados.
 
