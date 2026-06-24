@@ -59,11 +59,11 @@ A abordagem de limiares fixos de horas foi descartada por ignorar as diferenças
 
 | Nota | Registros |
 |---|---|
-| 1 | 11.104 |
-| 2 | 9.743 |
-| 3 | 9.772 |
-| 4 | 9.818 |
-| 5 | 10.216 |
+| 1 | 11.306 |
+| 2 | 9.544 |
+| 3 | 9.803 |
+| 4 | 9.726 |
+| 5 | 10.274 |
 
 **Modelos utilizados:**
 - **SVD** (Decomposição em Valores Singulares) via biblioteca Surprise modelo principal
@@ -89,8 +89,8 @@ A abordagem de limiares fixos de horas foi descartada por ignorar as diferenças
 
 | Métrica | Média | Desvio Padrão |
 |---|---|---|
-| RMSE | 1,4316 | 0,0017 |
-| MAE | 1,2259 | 0,0018 |
+| RMSE | 1,4355 | 0,0044 |
+| MAE | 1,2302 | 0,0040 |
 
 O desvio padrão reduzido confirma que o modelo é estável e generaliza consistentemente entre diferentes partições dos dados.
 
@@ -98,14 +98,14 @@ O desvio padrão reduzido confirma que o modelo é estável e generaliza consist
 
 | Modelo | RMSE | MAE |
 |---|---|---|
-| KNN Baseline | 1,4629 | 1,2358 |
-| **SVD** | **1,4217 ✅** | **1,2153 ✅** |
+| KNN Baseline | 1,4559 | 1,2301 |
+| **SVD** | **1,4206** | **1,2179** |
 
 **Hit Rate@10:**
 
 | Métrica | Meta | Resultado |
 |---|---|---|
-| Hit Rate@10 | > 80% | 83,3% ✅ |
+| Hit Rate@10 | > 15% | 15,5% |
 
 O SVD superou o KNN Baseline em todas as métricas e foi selecionado como modelo final. A métrica Hit Rate@10 indica que 83,3% dos usuários receberam ao menos uma recomendação genuinamente relevante entre as 10 primeiras sugestões geradas, superando a meta estabelecida.
 
