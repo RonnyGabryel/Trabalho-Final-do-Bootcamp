@@ -107,7 +107,7 @@ O desvio padrão reduzido confirma que o modelo é estável e generaliza consist
 |---|---|---|
 | Hit Rate@10 | > 15% | 15,5% |
 
-O SVD superou o KNN Baseline em todas as métricas e foi selecionado como modelo final. A métrica Hit Rate@10 indica que 83,3% dos usuários receberam ao menos uma recomendação genuinamente relevante entre as 10 primeiras sugestões geradas, superando a meta estabelecida.
+O SVD superou o KNN Baseline em todas as métricas e foi selecionado como modelo final. A métrica Hit Rate@10 indica que 15,5%. dos usuários receberam ao menos uma recomendação genuinamente relevante entre as 10 primeiras sugestões geradas, superando a meta estabelecida.
 
 > **Nota sobre os valores absolutos de RMSE e MAE:** Os valores obtidos são naturalmente superiores aos de projetos que utilizam limiares fixos de horas, pois a normalização por percentil produz uma distribuição uniforme entre as notas, maximizando a variância dos rótulos e tornando a tarefa de predição mais exigente. O indicador mais representativo da utilidade prática do sistema é o Hit Rate@10.
 
