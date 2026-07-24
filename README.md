@@ -1,3 +1,9 @@
+
+
+
+
+
+
 <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdTYzbGxzYjZ5dGVsNnVnNGNzaWRhM25leWUxdDVzazFqbzQ0d2k5MyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/doXBzUFJRxpaUbuaqz/giphy.gif" alt="Steam UI" width="100%" height="300px">
 
 <p align="center">
@@ -176,3 +182,5 @@ with open('modelo_svd.pkl', 'rb') as f:
 ```
 
 > O módulo `pickle` é nativo do Python e não requer instalação adicional.
+
+[![Assista ao Pitch](https://img.youtube.com/vi/SEU_VIDEO_ID/maxresdefault.jpg)](https://www.youtube.com/watch?v=SEU_VIDEO_ID)
