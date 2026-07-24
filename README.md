@@ -183,4 +183,4 @@ with open('modelo_svd.pkl', 'rb') as f:
 
 > O módulo `pickle` é nativo do Python e não requer instalação adicional.
 
-[![Assista ao Pitch]([https://img.youtube.com/vi/SEU_VIDEO_ID/maxresdefault.jpg)](https://www.youtube.com/watch?v=SEU_VIDEO_ID](https://youtu.be/gyXdjMZsKn0))
+[![Assista ao Pitch](https://www.youtube.com/watch?v=gyXdjMZsKn0)
