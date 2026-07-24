@@ -6,7 +6,6 @@ import seaborn as sns # visualização estatística baseada no matplotlib
 from surprise import Dataset, Reader, SVD, KNNBaseline # estruturas de dados e algoritmos de recomendação
 from surprise.model_selection import cross_validate, train_test_split  # validação cruzada e divisão de dados
 from surprise import accuracy # métricas de avaliação de erro preditivo
-from collections import defaultdict # estrutura auxiliar para agrupamento de recomendações
 
 # leitura do arquivo csv atribuindo nomes descritivos às colunas manualmente
 # o dataset não possui cabeçalho nativo, por isso header= None é necessário
