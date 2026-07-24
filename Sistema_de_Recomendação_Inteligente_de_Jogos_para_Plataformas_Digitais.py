@@ -120,11 +120,8 @@ for jogo, grupo in df_treino_raw.groupby('game_title'):
     )
 
 # aplico os percentis do treino no próprio treino
-nomes_treino = df_treino_raw['game_title'].values
 df_treino = df_treino_raw.groupby('game_title', group_keys=False).apply(horas_para_engajamento_percentil)
-df_treino = df_treino.reset_index(drop=False)
-df_treino = df_treino.rename(columns={'index': 'game_title'})
-df_treino['game_title'] = nomes_treino
+df_treino = df_treino.reset_index(drop=True)
 
 # aplico os limiares do treino no teste sem recalcular, sem contaminar
 df_teste = aplicar_limiares_do_treino(df_teste_raw, limiares_treino)
