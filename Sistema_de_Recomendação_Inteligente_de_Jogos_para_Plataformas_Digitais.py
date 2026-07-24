@@ -38,7 +38,7 @@ df_filtrado = df_play[df_play['game_title'].isin(jogos_validos)].copy()
 
 print(f"Dimensões após filtragem: {df_filtrado.shape}")
 print(f"Usuários únicos: {df_filtrado['user_id'].nunique()}")
-print(f"Jogos únicos:    {df_filtrado['game_title'].nunique()}")
+print(f"Jogos únicos: {df_filtrado['game_title'].nunique()}")
 
 # a abordagem de limiares fixos (ex: < 1h = nota 1) ignora diferenças entre gêneros de jogos
 # um RPG com 20h pode representar engajamento médio, enquanto 20h em um jogo casual é altíssimo
@@ -51,7 +51,7 @@ indices_treino = df_filtrado.sample(frac=0.8, random_state=42).index
 indices_teste  = df_filtrado.index.difference(indices_treino)
 
 df_treino_raw = df_filtrado.loc[indices_treino].copy()
-df_teste_raw  = df_filtrado.loc[indices_teste].copy()
+df_teste_raw = df_filtrado.loc[indices_teste].copy()
 
 
 # converte as horas jogadas em uma escala de engajamento de 1 a 5
