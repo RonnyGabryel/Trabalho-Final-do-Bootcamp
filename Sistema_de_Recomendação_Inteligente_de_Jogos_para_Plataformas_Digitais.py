@@ -92,7 +92,7 @@ def aplicar_limiares_do_treino(df_subset, limiares):
 
     def classificar_com_limiar(row):
         jogo = row['game_title']
-        h    = row['hours_played']
+        h = row['hours_played']
         # se o jogo não existia no treino, atribuo nota média como fallback
         if jogo not in limiares:
             return 3
