@@ -126,7 +126,7 @@ O projeto demonstrou que é possível construir um sistema de recomendação fun
 
 ### Execução do Projeto
 
-Para a reprodução dos experimentos localmente, recomenda-se a utilização de um gerenciador de ambientes virtuais (como o **Conda** ou **Virtualenv**) sob a especificação do **Python 3.11** configurado no PyCharm.
+Para a reprodução dos experimentos localmente, recomenda-se a utilização de um gerenciador de ambientes virtuais (como Virtualenv ou Conda) configurado com o **Python 3.10 ou Python 3.11** no PyCharm.
   
 1. Efetue a clonagem do repositório via terminal:
 
