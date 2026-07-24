@@ -131,7 +131,7 @@ Para a reprodução dos experimentos localmente, recomenda-se a utilização de 
 1. Efetue a clonagem do repositório via terminal:
 
 ```
-git clone [https://github.com/RonnyGabryel/Trabalho-Final-do-Bootcamp.git](https://github.com/RonnyGabryel/Trabalho-Final-do-Bootcamp.git)
+git clone https://github.com/RonnyGabryel/Trabalho-Final-do-Bootcamp.git
 ```
   
 2. Navegue até o diretório raiz do projeto:
