@@ -193,7 +193,7 @@ reader = Reader(rating_scale=(1, 5))
 # carrego os dados de treino e teste separados no formato exigido pela biblioteca Surprise
 # uso os DataFrames já separados antes para manter a consistência com o fix de data leakage
 data_treino = Dataset.load_from_df(df_treino[['user_id', 'game_title', 'engajamento']], reader)
-data_full   = Dataset.load_from_df(df_filtrado[['user_id', 'game_title', 'engajamento']], reader)
+data_full = Dataset.load_from_df(df_filtrado[['user_id', 'game_title', 'engajamento']], reader)
 
 # construo o trainset a partir do df_treino e o testset a partir do df_teste
 # dessa forma a divisão respeita os limiares calculados separadamente em cada parte
@@ -223,7 +223,7 @@ mae_knn  = accuracy.mae(preds_knn,  verbose=False)
 
 print(" KNN Baseline Avaliação no Conjunto de Teste")
 print(f"RMSE: {rmse_knn:.4f}")
-print(f"MAE:  {mae_knn:.4f}")
+print(f"MAE: {mae_knn:.4f}")
 
 # o SVD decompõe a matriz usuário jogo em fatores latentes
 # esses fatores capturam padrões ocultos de preferência que não estão explícitos nos dados
@@ -243,8 +243,8 @@ print(f"MAE:  {mae_svd:.4f}")
 # permite identificar objetivamente qual algoritmo apresentou menor erro de predição
 resultados = pd.DataFrame({
     'Modelo': ['KNN Baseline', 'SVD'],
-    'RMSE':   [round(rmse_knn, 4), round(rmse_svd, 4)],
-    'MAE':    [round(mae_knn,  4), round(mae_svd,  4)],
+    'RMSE':[round(rmse_knn, 4), round(rmse_svd, 4)],
+    'MAE':[round(mae_knn,  4), round(mae_svd,  4)],
 })
 
 resultados['Melhor RMSE'] = resultados['RMSE'] == resultados['RMSE'].min()
@@ -312,7 +312,7 @@ print(f"Hit Rate@10 catálogo completo: {hr_real:.4f}  ({hr_real * 100:.1f}%)")
 
 def recomendar_jogos(usuario_id, modelo, df, n=10):
 
-    todos_jogos       = df['game_title'].unique()
+    todos_jogos = df['game_title'].unique()
     jogos_do_usuario  = df[df['user_id'] == usuario_id]['game_title'].tolist()
     jogos_nao_jogados = [j for j in todos_jogos if j not in jogos_do_usuario]
 
