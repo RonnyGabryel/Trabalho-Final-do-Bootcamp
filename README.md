@@ -179,6 +179,8 @@ with open('modelo_svd.pkl', 'rb') as f:
 
 ---
 
+---
+
 ## 🎬 Pitch do Projeto
 
 Clique na imagem abaixo para assistir ao vídeo de apresentação do projeto:
