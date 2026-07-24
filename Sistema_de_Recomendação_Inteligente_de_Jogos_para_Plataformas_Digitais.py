@@ -130,7 +130,7 @@ df_treino['game_title'] = nomes_treino
 df_teste = aplicar_limiares_do_treino(df_teste_raw, limiares_treino)
 
 # junto treino e teste para manter os gráficos exploratórios com a base completa
-df_filtrado = pd.concat([df_treino, df_teste]).reset_index(drop=True)
+df_filtrado = pd.concat([df_treino, df_teste], ignore_index=True)
 
 print("Distribuição da escala de engajamento após normalização por percentil:\n")
 print(df_filtrado['engajamento'].value_counts().sort_index())
