@@ -15,7 +15,6 @@ Projeto final do Bootcamp de Aprendizado de Máquina da LAMIA. O objetivo é con
 ## Sumário
 
 > **01.** [Introdução](#introdução)  
-> **02.** [O Problema](#problema)  
 > **03.** [Base de Dados](#base-de-dados)  
 > **04.** [Metodologia](#metodologia)  
 > **05.** [Resultados](#resultados)  
@@ -27,12 +26,6 @@ Projeto final do Bootcamp de Aprendizado de Máquina da LAMIA. O objetivo é con
 ## Introdução
 
 Com dezenas de milhares de jogos disponíveis na Steam, encontrar algo que realmente valha a pena jogar virou um problema real. O usuário acaba gastando mais tempo rolando a página do que jogando de verdade. Este projeto aplica técnicas de aprendizado de máquina para resolver esse problema, transformando o histórico de horas jogadas em recomendações personalizadas.
-
----
-
-## Problema
-
-A sobrecarga de opções em plataformas digitais de jogos prejudica a experiência do usuário e a retenção dentro da plataforma. O desafio técnico está em transformar dados implícitos o tempo que o usuário passa jogando em uma métrica de engajamento capaz de alimentar um modelo de recomendação eficiente.
 
 ---
 
