@@ -20,7 +20,6 @@ Projeto final do Bootcamp de Aprendizado de Máquina da LAMIA. O objetivo é con
 > **04.** [Resultados](#resultados)  
 > **05.** [Conclusões](#conclusões)  
 > **06.** [Como Rodar o Projeto](#como-rodar-o-projeto)  
-> **07.** [Pitch do Projeto](#pitch-do-projeto)
 ---
 
 ## Introdução
@@ -180,9 +179,3 @@ with open('modelo_svd.pkl', 'rb') as f:
 ---
 
 ---
-
-## 🎬 Pitch do Projeto
-
-Clique na imagem abaixo para assistir ao vídeo de apresentação do projeto:
-
-[![Assista ao Pitch do Projeto](https://img.youtube.com/vi/gyXdjMZsKn0/maxresdefault.jpg)](https://www.youtube.com/watch?v=gyXdjMZsKn0)
